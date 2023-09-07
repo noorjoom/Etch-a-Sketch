@@ -18,4 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+const btn = document.querySelector('#btn');
 
+btn.onclick = () => {
+    const userInput= prompt("Enter a number between 1 and 100 to create a grid of given number.");
+
+    if (userInput !== null) {
+        const number = parseInt(userInput);
+        if (!isNaN(number) && number >= 1 && number <= 100) {
+            return number;
+        } else {
+            alert("Invalid input. Please enter a number between 1 and 100.");
+        }
+    }
+};
