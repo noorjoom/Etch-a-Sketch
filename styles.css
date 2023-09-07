@@ -1,0 +1,10 @@
+.grid {
+    height: 30px;
+    width: 30px;
+    border: black solid 1px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 30px); /*16 cols created with width of 30px each*/
+}
