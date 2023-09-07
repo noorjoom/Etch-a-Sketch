@@ -8,5 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
             container.appendChild(grid);
         }
     }
+    
+    const hoverGrid = document.querySelectorAll('.grid');
+    
+    hoverGrid.forEach((grid) => {
+        grid.addEventListener("mouseover", (event) => {
+            event.target.style.backgroundColor = "red";
+        });
+    });
 });
+
 
