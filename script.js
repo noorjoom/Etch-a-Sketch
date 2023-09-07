@@ -1,3 +1,12 @@
+function newGrid() {
+    const container = document.querySelector('#container');
+    const innerDiv = container.querySelectorAll('.grid');
+
+    innerDiv.forEach((div) => {
+        container.removeChild(div);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('#container');
     
@@ -26,9 +35,11 @@ btn.onclick = () => {
     if (userInput !== null) {
         const number = parseInt(userInput);
         if (!isNaN(number) && number >= 1 && number <= 100) {
-            return number;
+            return newGrid();
+            
         } else {
             alert("Invalid input. Please enter a number between 1 and 100.");
         }
     }
 };
+
